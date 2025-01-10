@@ -1,0 +1,61 @@
+.godi {
+  color: red;
+
+  text-align: center;
+}
+
+.animated-piscando {
+  animation: piscar 2s infinite;
+  font-weight: bold;
+}
+
+@keyframes piscar {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+.star {
+  width: 20px;
+  height: 20px;
+  background-color: gold;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  animation: jump 2s ease-in-out infinite;
+  margin: 0 10px; /* Espaçamento entre as estrelas */
+}
+
+/* Animação de pular estilo onda */
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px); /* Altura do pulo */
+  }
+}
