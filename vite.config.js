@@ -7,6 +7,7 @@ export default defineConfig({
     open: true, // Abre automaticamente no navegador
   },
   build: {
+    outDir: "dist",
     target: "esnext",
   },
 });
