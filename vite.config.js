@@ -10,4 +10,10 @@ export default defineConfig({
     outDir: "dist",
     target: "esnext",
   },
+  resolve: {
+    alias: {
+      // Caso tenha problemas específicos de caminho, pode ser necessário definir um alias para resolver corretamente
+      bootstrap: "node_modules/bootstrap/dist/css/bootstrap.min.css",
+    },
+  },
 });
